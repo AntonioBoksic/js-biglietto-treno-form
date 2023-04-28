@@ -36,36 +36,66 @@ console.log(myButton);
 // voglio salvare i dati dopo il click
 
 myButton.addEventListener("click", 
-function () {
+function () 
+{
     kmText = document.getElementById("kmText").value;
     ageText = document.getElementById("ageText").value;
     console.log(kmText);
     console.log(ageText);
-}
+
+    
+    // calcolare prezzo intero
+    fullPrice = pricePerKm * kmText;
+    console.log(fullPrice);
+    
+    // stabilire prezzo finale in base a sconto età
+    {
+        if (ageText < juniorAge) {
+            price = fullPrice * (1- juniorDiscount);
+        } else if (ageText >= seniorAge) {
+            price = fullPrice * (1-seniorDiscount);
+        } else {
+            price = fullPrice;
+        };
+        console.log(price)
+
+
+    }
+
+            // genera messaggio da restituire
+            messaggio = `il costo del tuo biglietto è  ${price.toFixed(2)} Euro`;
+
+            // restituisci messaggio finale all utente
+            document.getElementById("mio-id").innerHTML = messaggio
+    
+
+} 
+    
+
 );
 
 
-// calcolare prezzo intero
+// (questo l'ho inserito sopra  nell eventListener e viene preso in considerazione solo dopo il click) calcolare prezzo intero
 
-fullPrice = pricePerKm * km;
+// fullPrice = pricePerKm * kmText;
 
 // stabilire prezzo finale in base a sconto età
 
-if (age < juniorAge) {
-    price = fullPrice * (1- juniorDiscount);
-} else if (age >= seniorAge) {
-    price = fullPrice * (1-seniorDiscount);
-} else {
-    price = fullPrice;
-};
+// if (ageText < juniorAge) {
+//     price = fullPrice * (1- juniorDiscount);
+// } else if (ageText >= seniorAge) {
+//     price = fullPrice * (1-seniorDiscount);
+// } else {
+//     price = fullPrice;
+// };
 
 
 // genera messaggio da restituire
-messaggio = `il costo del tuo biglietto è  ${price.toFixed(2)} Euro`;
+// messaggio = `il costo del tuo biglietto è  ${price.toFixed(2)} Euro`;
 
-// restituisci messaggio finale all utente
+// // restituisci messaggio finale all utente
 
-document.getElementById("mio-id").innerHTML = messaggio
+// document.getElementById("mio-id").innerHTML = messaggio
 
 
 
