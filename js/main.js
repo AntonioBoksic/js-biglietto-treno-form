@@ -12,8 +12,29 @@ juniorDiscount = 0.2;
 seniorDiscount = 0.4;
 
 // prendere input da utente
-km = prompt ("quanti km devi percorrere?");
-age = prompt ("quanti anni hai?");
+
+// (((((((())))))))
+// logica esercizio vecchio 
+// km = prompt ("quanti km devi percorrere?");
+// age = prompt ("quanti anni hai?");
+// (((((((())))))))
+
+
+// logica esercizio nuovo
+
+
+// seleziono elementi HTML che mi servono per la logica del programma
+let kmText = document.querySelector("#kmText")
+console.log(kmText);
+
+let ageText = document.querySelector("#ageText");
+console.log(ageText);
+
+let myButton = document.querySelector("#myButton");
+console.log(myButton);
+
+// voglio salvare i dati dopo il click
+
 
 // calcolare prezzo intero
 
