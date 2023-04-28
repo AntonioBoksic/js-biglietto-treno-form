@@ -35,6 +35,14 @@ console.log(myButton);
 
 // voglio salvare i dati dopo il click
 
+myButton.addEventListener("click"), 
+function () {
+    kmText = document.getElementById("#kmText").value;
+    ageText = document.getElementById("#ageText").value;
+    console.log(kmText);
+    console.log(ageText);
+}
+
 
 // calcolare prezzo intero
 
