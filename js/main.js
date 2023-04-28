@@ -37,8 +37,8 @@ console.log(myButton);
 
 myButton.addEventListener("click", 
 function () {
-    kmText = document.getElementById("#kmText").value;
-    ageText = document.getElementById("#ageText").value;
+    kmText = document.getElementById("kmText").value;
+    ageText = document.getElementById("ageText").value;
     console.log(kmText);
     console.log(ageText);
 }
