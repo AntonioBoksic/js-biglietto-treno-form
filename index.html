@@ -5,14 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Form</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1 id="mio-id">Prenota il tuo biglietto</h1>
-    <input type="text" placeholder="km" id="kmText">
-    <input type="text" placeholder="age" id="ageText">
-    <button id="myButton">submit</button>
+    <!-- form -->
+    <div class="halfscreen">
 
+        <div class="flex-container">
+            
+            <h1 >Calcola il prezzo del tuo biglietto</h1>
+                
+                
+            <div class="row">
+
+                    <!-- input nome -->
+                    <div class="col">
+                        <label for="#nameText">Nome Cognome</label>
+                        <input type="text" placeholder="Nome Cognome" id="nameText">
+                    </div>
+
+
+                    <!-- input km -->
+                    <div class="col">
+                        <label for="#kmText">km da percorrere</label>
+                        <input type="text" placeholder="km" id="kmText">
+                    </div>
+
+                    <!-- input age -->
+                    <div class="col">
+                        <label for="#ageText">inserisci la tua età</label>
+                        <input type="text" placeholder="age" id="ageText">
+                    </div>
+
+            </div>
+
+            <div class="row">
+                    <button id="registerButton">submit</button>
+                    <button id="cancelButton">cancel</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- parte che appare dopo il click -->
+    <div class="halfscreen">
+            
+        <!-- ticket -->
+        <div class="flex-container disattivato" id="ticket">
+
+            <h1 >Il tuo biglietto</h1>
+
+            
+            <div class="row">
+                <!-- nome -->
+                <div class="col grey">
+                            <div class="bold">Nome Passeggero</div>
+                            <div id="nome"></div>
+                </div>  
+
+                <!-- Offerta -->
+                <div class="col">
+                            <div class="bold">Offerta</div>
+                            <div>biglietto standard</div>
+                </div>
+
+                <!-- Carrozza -->
+                <div class="col">
+                            <div class="bold">Carrozza</div>
+                            <div>5</div>
+                </div>
+
+                <!-- Codice CP -->
+                <div class="col">
+                            <div class="bold">Codice CP</div>
+                            <div>99443</div>
+                    </div>
+
+                <!-- costo -->
+                <div class="col">
+                            <div class="bold">Costo biglietto</div>
+                            <div id="costo">lalal</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- script logica -->
     <script src="js/main.js"></script>
     
 </body>
